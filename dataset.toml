@@ -1,0 +1,27 @@
+[general]
+resolution = 896
+batch_size = 2
+enable_bucket = true
+min_bucket_reso = 256
+max_bucket_reso = 1024
+bucket_reso_steps = 64
+
+
+[[datasets]]
+
+	[[datasets.subsets]]
+	num_repeats = 2
+	keep_tokens = 1
+	caption_extension = '.txt'
+	shuffle_caption = true
+  flip_aug = false
+	image_dir = '/images'
+
+# Example of a second data subset
+#	[[datasets.subsets]]
+#	num_repeats = 4
+#	keep_tokens = 1
+#	caption_extension = '.txt'
+#	shuffle_caption = true
+#  flip_aug = false
+#	image_dir = '/images2'
