@@ -1,0 +1,34 @@
+pretrained_model_name_or_path = '/animefull-final-pruned.ckpt'
+mixed_precision = 'bf16'
+seed = 23
+clip_skip = 2
+max_data_loader_n_workers = 1
+persistent_data_loader_workers = true
+max_token_length = 225
+prior_loss_weight = 1.0
+xformers = true
+max_train_epochs = 50
+network_dim = 32
+network_alpha = 16.0
+max_timestep = 1000
+network_args = ['module_dropout=0.15']
+#AdamW (default), AdamW8bit, PagedAdamW8bit, Lion8bit, PagedLion8bit, Lion, SGDNesterov, SGDNesterov8bit, DAdaptation(DAdaptAdamPreprint), DAdaptAdaGrad, DAdaptAdam, DAdaptAdan, DAdaptAdanIP, DAdaptLion, DAdaptSGD, AdaFactor
+optimizer_type = 'AdamW8bit'
+#linear, cosine, cosine_with_restarts, polynomial, constant (default), constant_with_warmup, adafactor
+lr_scheduler = 'cosine'
+learning_rate = 0.0005
+max_grad_norm = 1.0
+unet_lr = 0.0001
+text_encoder_lr = 5e-05
+min_snr_gamma = 8
+scale_weight_norms = 3.0
+optimizer_args = ['weight_decay=0.1', 'betas=0.9,0.99']
+output_dir = '/notebooks/LoRA/'
+save_precision = 'fp16'
+save_model_as = 'safetensors'
+output_name = 'uwu'
+save_every_n_epochs = 1
+multires_noise_iterations = 6
+multires_noise_discount = 0.3
+network_module = 'networks.lora'
+lr_warmup_steps = 2348
